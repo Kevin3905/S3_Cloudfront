@@ -1,0 +1,19 @@
+##### shows address of your website in the terminal ######
+
+
+output "s3_url" {
+  description = "S3 hosting URL (HTTP)"
+  value       = aws_s3_bucket_website_configuration.hosting.website_endpoint
+}
+
+output "cloudfront_distribution_id" {
+  description = "The identifier for the distribution."
+  value       = aws_cloudfront_distribution.distribution.id
+}
+
+
+output "cloudfront_distribution_domain_name" {
+  description = "The domain name corresponding to the distribution."
+  value       = aws_cloudfront_distribution.distribution.domain_name
+}
+
