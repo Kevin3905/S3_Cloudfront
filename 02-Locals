@@ -1,0 +1,10 @@
+###### this template will automatically upload to S3, 'everything' from this content directory #######
+locals {
+  content_types = {
+    ".html" : "text/html",
+    ".css" : "text/css",
+    ".js" : "text/javascript"
+    ".jpg" : "text/jpg"
+  }
+}
+
