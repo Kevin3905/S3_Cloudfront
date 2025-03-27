@@ -1,0 +1,10 @@
+###### To host the files as a website #######
+resource "aws_s3_bucket_website_configuration" "hosting" {
+  bucket = aws_s3_bucket.flemming-friday.id
+
+  index_document {
+    
+    suffix = "Brazil.html"
+  
+  }
+}
