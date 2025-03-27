@@ -1,0 +1,10 @@
+##### creates and names bucket in AWS #####
+resource "aws_s3_bucket" "flemming-friday" {
+  bucket = "flemming-friday"
+  force_destroy = true
+
+  tags = {
+    Name        = "Fleming Practice Bucket"
+    Environment = "AWS/ADO"
+  }
+}
