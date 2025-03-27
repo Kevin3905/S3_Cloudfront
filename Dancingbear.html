@@ -1,0 +1,19 @@
+echo "
+<!doctype html>
+<html lang=\"en\" class=\"h-100\">
+<head>
+<title>https://ec2-34-201-221-116.compute-1.amazonaws.com/</title>
+</head>
+<body>
+<div>
+<h1>Let's Get It</h1>
+<h1>Ya Ya Ya Ya </h1>
+<h1><iframe src="https://giphy.com/embed/tsX3YMWYzDPjAARfeg" width="376" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/tiktok-bear-tsX3YMWYzDPjAARfeg">via GIPHY</a></p></h1>
+<p><b>Instance Name:</b> $(hostname -f) </p>
+<p><b>Instance Private Ip Address: </b> ${local_ipv4}</p>
+<p><b>Availability Zone: </b> ${az}</p>
+<p><b>Virtual Private Cloud (VPC):</b> ${vpc}</p>
+</div>
+</body>
+</html>
+" > /var/www/html/index.html
