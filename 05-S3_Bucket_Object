@@ -1,0 +1,39 @@
+######Upload the files into the bucket #########
+resource "aws_s3_bucket_object" "index" {
+    bucket = aws_s3_bucket.flemming-friday.id
+    for_each = {
+        
+        "index.html"  = "text/html"
+        
+    }
+    key = each.key
+    source = "./${each.key}"
+    content_type = each.value
+    etag = filemd5("./${each.key}")
+}
+
+resource "aws_s3_bucket_object" "dancingbear" {
+    bucket = aws_s3_bucket.flemming-friday.id
+    for_each = {
+        
+        "dancingbear.html"  = "text/html"
+        
+    }
+    key = each.key
+    source = "./${each.key}"
+    content_type = each.value
+    etag = filemd5("./${each.key}")
+}
+
+resource "aws_s3_bucket_object" "Brazil" {
+    bucket = aws_s3_bucket.flemming-friday.id
+    for_each = {
+        
+        "Brazil.html"  = "text/html"
+        
+    }
+    key = each.key
+    source = "./${each.key}"
+    content_type = each.value
+    etag = filemd5("./${each.key}")
+}
